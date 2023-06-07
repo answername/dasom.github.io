@@ -1,0 +1,247 @@
+body {
+    width: 1200px;
+    font-family: 'NanumSquare', sans-serif;
+    background-color: #e9ecef;
+    overflow-x: hidden;
+}
+a {text-decoration: none; color: black;}
+
+/* 폰트설정 */
+.afronaut{
+    font-family: "afronaut", sans-serif;
+    font-weight: 400;
+    font-size: 100px;
+    font-style: normal;
+}
+
+
+
+/* nav */
+#full {
+    width: 70px;
+    height: 4179px;
+    position: absolute;
+    margin: 0;
+    background-color: #fff;
+}
+#nav {
+    height: 1000px;
+    width: 70px;
+    margin: 0;
+}
+#nav::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+#nav > a {
+    display: block;
+    top: 600px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#nav > a > img {
+    width: 20px;
+}
+#nav > ul {
+    position: absolute;
+    height: 420px;
+    width: 70px;
+    margin: 0;
+    padding-bottom: 40px;
+    transform: rotate(-180deg);
+    writing-mode: vertical-lr;
+    text-orientation: sideways;
+}
+#nav > ul > li {
+    float: left;
+    height: 20%;
+    margin: 0 auto;
+    line-height: 70px;
+    font-size: 14px;
+}
+#nav > ul > li > a {
+    display: block;
+    text-align: center;
+}
+
+#nav li:hover > a {
+    font-weight: bold;
+}
+
+/* top */
+#top {
+    height: 700px;
+    width: 1130px;
+    background-color: #242424;
+    margin-right: 0;
+}
+#tcontent {
+    padding: 100px 0;
+}
+#tcontent > div {
+    margin-bottom: 50px;
+    text-align: center;
+}
+#tcontent > div > div {
+    display: inline-block;
+    padding-right: 5px;
+}
+#tcontent .afronaut {
+    color: #fff;
+}
+#tcontent h2 {
+    color: #fff;
+    font-size: 25px;
+    text-align: center;
+}
+
+
+/* 중간 */
+#middle {
+    width: 1130px;
+    margin-right: 0;
+}
+#middle > img {
+    display: block;
+    text-align: center;
+    padding: 120px 0;
+}
+#middle > div:last-child {
+    text-align: center;
+    margin-bottom: 150px;
+}
+#middle > div:last-child::before {
+    content: "";
+    display: inline-block;
+    border: 1px solid #333;
+    width: 350px;
+    vertical-align: 1.3em;
+    margin-right: 20px;
+}
+#middle > div:last-child::after {
+    content: "";
+    display: inline-block;
+    border: 1px solid #333;
+    width: 350px;
+    vertical-align: 1.3em;
+    margin-left: 20px;
+}
+
+
+/* content */
+#content {
+    width: 1130px;
+    margin-right: 0;
+    background: url("../images/info_bg.png") no-repeat center;
+}
+#contents {
+    width: 1040px;
+}
+.safe {
+    transform: translateX(400%);
+    transition: transform 1s ease;
+}
+.safe:nth-of-type(even) {
+    transform: translateX(-400%);
+}
+.safe.show {
+    transform: translateX(0);
+}
+.safe > div:last-child {
+    margin-top: 100px;
+}
+.safe::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+.safe:not(:nth-child(2n)) > div {
+    float: left;
+}
+.safe:not(:nth-child(2n)) > div > div {
+    text-align: left;
+    margin-left: 20px;
+}
+.safe:nth-child(2n) > div {
+    float: right;
+}
+.safe:nth-child(2n) > div > div {
+    text-align: right;
+    margin-right: 20px;
+}
+.safe > div h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.safe > div p {
+    line-height: 30px;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+
+/* td */
+#td {
+    width: 1130px;
+    margin-right: 0;
+    margin-top: 100px;
+    position: relative;
+}
+#td img {
+    width: 1130px;
+}
+#td > a {
+    position: absolute;
+    bottom: 90px;
+    right: 78px;
+    color:#fff;
+    font-size: 20px;
+}
+
+/* footer */
+#footer {
+    background-color: #333;
+    width: 1130px;
+    margin-top: 100px;
+    margin-right: 0;
+    color: #fff;
+    padding: 20px 0;
+}
+#footer > ul {
+    text-align: center;
+    padding: 30px 0;
+}
+#footer > ul a {
+    color: #fff;
+}
+#footer > ul:first-child > li {
+    display: inline-block;
+}
+#footer > ul:first-child > li:not(:last-child) {
+    padding-right: 50px;
+}
+#footer > ul:last-child > li:not(:last-child) {
+    padding-bottom: 10px;
+}
+
+/* top */
+.top {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    position: fixed;
+    border-radius: 50%;
+    border: 1px solid #555;
+    right: 50px;
+    bottom: 50px;
+    text-align: center;
+    color: #000;
+    display: none;
+}
+.top:hover {
+    background-color: #182f4b;
+    color: #fff;
+}

@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+body {
+    width: 1200px;
+    font-family: 'NanumSquare', sans-serif;
+    background-color: #e9ecef;
+}
+a {text-decoration: none; color: black;}
+
+/* 폰트설정 */
+.playfair {
+    font-family: 'Playfair Display', serif;
+    font-size: 70px;
+}
+
+
+/* nav */
+#full {
+    width: 70px;
+    height: 2030px;
+    position: absolute;
+    margin: 0;
+    background-color: #fff;
+}
+#nav {
+    height: 1000px;
+    width: 70px;
+    margin: 0;
+}
+#nav::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+#nav > a {
+    display: block;
+    top: 600px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#nav > a > img {
+    width: 20px;
+}
+#nav > ul {
+    position: absolute;
+    height: 420px;
+    width: 70px;
+    margin: 0;
+    padding-bottom: 40px;
+    transform: rotate(-180deg);
+    writing-mode: vertical-lr;
+    text-orientation: sideways;
+}
+#nav > ul > li {
+    float: left;
+    height: 20%;
+    margin: 0 auto;
+    line-height: 70px;
+    font-size: 14px;
+}
+#nav > ul > li > a {
+    display: block;
+    text-align: center;
+}
+
+#nav li:hover > a {
+    font-weight: bold;
+}
+
+/* module */
+#module {
+    width: 1130px;
+    margin-right: 0;
+    border-bottom: 3px solid #333;
+}
+#module > h1 {
+    padding: 60px 100px;
+}
+#menu {
+    position: relative;
+    width: 1050px;
+    cursor: pointer;
+}
+#menus {
+    width: 1000px;
+    position: relative;
+    height: 340px;
+    overflow: hidden;
+}
+#menus > ul {
+    position: absolute;
+    top: 0;
+    left: -250px;
+    width: 1750px;
+}
+#menus > ul > li {
+    float: left;
+    display: block;
+}
+
+#menus > ul > li > div {
+    display: block;
+    width: 250px;
+    height: 300px;
+    position: relative;
+}
+
+#menus > ul > li > div > div {
+    position: absolute;
+    bottom: 0;
+    width: 250px;
+    text-align: center;
+}
+.dot  {
+    width: 250px;
+    height: 250px;
+    background-color: #fff;
+    border-radius: 50%;
+    font-weight: bold;
+}
+#menus img {
+    max-width: 250px;
+    max-height: 250px;
+}
+#menus p {
+    font-size: 18px;
+    margin-top: 15px;
+}
+#left, #right {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 45%;
+    cursor: pointer;
+}
+#left {
+    background: url("../images/list_left.png") no-repeat left center;
+    left: -2%;
+}
+#right {
+    background: url("../images/list_right.png") no-repeat right center;
+    right: -2%;
+}
+#left > span, #right > span {
+    display: none;
+}
+
+
+/* choice */
+#choice {
+    width: 1130px;
+    margin-right: 0;
+}
+#select {
+   margin: 70px 0;
+   text-align: right;
+   cursor: pointer;
+}
+#select > li {
+    display: inline-block;
+    padding-right: 20px;
+    color: #999;
+}
+#select > li:hover {
+    color: #000;
+}
+
+.line {
+    margin: 70px 0;
+}
+.line::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.line > li {
+    float: left;
+    text-align: center;
+}
+.line > li p {
+    line-height: 25px;
+}
+.line > li p:last-child {
+    font-size: 10px;
+    color: #888;
+}
+
+.size {
+    position: relative;
+    width: 260px;
+    height: 260px;
+}
+.size > div {
+    width: 260px;
+    position: absolute;
+    bottom: 0;
+}
+.size::after {
+    display: none;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background-color: #fff;
+    z-index: -333;
+}
+li:hover .size::after {
+    display: block;
+}
+
+
+/* footer */
+#footer {
+    background-color: #333;
+    width: 1130px;
+    margin-top: 100px;
+    margin-right: 0;
+    color: #fff;
+    padding: 20px 0;
+}
+#footer > ul {
+    text-align: center;
+    padding: 30px 0;
+}
+#footer > ul a {
+    color: #fff;
+}
+#footer > ul:first-child > li {
+    display: inline-block;
+}
+#footer > ul:first-child > li:not(:last-child) {
+    padding-right: 50px;
+}
+#footer > ul:last-child > li:not(:last-child) {
+    padding-bottom: 10px;
+}

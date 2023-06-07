@@ -1,0 +1,687 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap');
+@font-face {
+    font-family: 'KCC-eunyoung';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/KCC-eunyoung-Regular.woff') format('woff');
+}
+
+/* 기본설정 */
+html, body {height: 100%;}
+a {text-decoration: none; color: black;}
+.page {
+    height: 100%;
+    position: relative;
+}
+
+/* 폰트지정 */
+.kcc {
+    font-family: 'KCC-eunyoung', cursive;
+    font-size: 30px;
+}
+h2.kcc {
+    font-family: 'KCC-eunyoung', cursive;
+    font-size: 100px;
+}
+.roboto {
+    font: 14px "Roboto Condensed", sans-serif;
+    font-weight: 300;
+}
+h2.roboto {
+    font: 60px "Roboto Condensed", sans-serif;
+    font-weight: 400;
+}
+#select a, #select p {
+    font: 20px "Roboto Condensed", sans-serif;
+    color: #666;
+    font-weight: 400;
+}
+
+/* 메뉴 */
+
+#about > li > div {
+    padding-bottom: 17px;
+    border-bottom: 1px solid #333;
+} 
+
+#first_page span, #third_page #menu span, #fourth_page span {
+    border-right: 1px solid #333;
+    padding: 2px;
+    display: inline-block;
+    width: 10px;
+    text-align: center;
+}
+
+#first_page span:last-child, 
+#second_page #menu li:last-child span:last-child, 
+#third_page #menu li:last-child span:last-child, 
+#fourth_page #menu li:last-child span:last-child {
+    border-right: 0;
+}
+#second_page #menu span {
+    padding: 2px;
+    display: inline-block;
+    width: 10px;
+    text-align: center;
+    border-right: 1px solid #333;
+}
+
+
+#menu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    margin-bottom: 50px;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+#menu > ul {
+    margin: 3px;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+#menu > ul::after {
+    content: ""; display: block; clear: both;
+}
+#menu > ul > li {
+    float: left; 
+}
+#menu > ul > li:not(:last-child):after {
+    content: "";
+    border-right: 1px solid #333;
+    display: block;
+    height: 21px;
+    float: right;
+    margin-left: 16px;
+}
+#menu > ul > li:not(:first-child)::before {
+    content: "";
+    border-left: 1px solid #333;
+    display: block;
+    height: 21px;
+    float: left;
+    margin-left: 16px;
+}
+
+#menu > ul > li:hover {
+    background-color: #999;
+}
+
+/* 배경 */
+#first_page, #last_page {
+    background: url("../images/bg.jpg") no-repeat center;
+}
+#second_page {
+    background: url("../images/bg.jpg") no-repeat center;
+}
+#fourth_page {
+    background: url("../images/works_bg2.png") no-repeat center;
+}
+
+/* 홈 */
+
+#left, #right {
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+#left {
+    position: absolute;
+    display: block;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+#right {
+    position: absolute;
+    display: block;
+    right: 0;
+    margin-top: 20px;
+    margin-right: 40px;
+}
+#left > li, #right > li {
+    border-top: 1px solid #333;
+    text-align: left;
+    border-bottom: 1px solid #333;
+    margin: 3px;
+}
+#right > li {
+    text-align: right;
+}
+
+#right > li:hover {
+    background-color: #999;
+}
+
+#content {
+    width: 1200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.line > img {
+    opacity: 0;
+}
+
+.line::before {
+    content: "";
+    display: inline-block;
+    vertical-align: 2em;
+    margin-right: 60px;
+    animation-name: long;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+}
+@keyframes long {
+    0%{
+        min-width: 0%;
+        border: 1px solid #333;
+    }
+    100%{
+        min-width: 520px;
+        border: 1px solid #333;
+    }
+}
+.line::after {
+    content: "";
+    display: inline-block;
+    vertical-align: 2em;
+    margin-left: 60px;
+    animation-name: mall;
+    animation-delay: 3s;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+}
+@keyframes mall {
+    0%{
+        min-width: 0%;
+    }
+    1% {
+        min-width: 0%;
+        border: 1px solid #333;
+    }
+    100%{
+        min-width: 520px;
+        border: 1px solid #333;
+    }
+}
+
+#content > h1 {
+    text-align: center;
+    font-size: 60px;
+    display: none;
+    margin-top: 50px;
+}
+
+
+#scroll {
+    position: absolute;
+    right: 40px;
+    bottom: 80px;
+    -webkit-animation: move infinite ease-in-out 2s;
+            animation: move infinite ease-in-out 2s;
+}
+@-webkit-keyframes move {
+    0% {
+        transform: translateY(80%);
+    }
+    50%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(80%);
+    }
+}
+@keyframes move {
+    0% {
+        transform: translateY(80%);
+    }
+    50%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(80%);
+    }
+}
+
+#scroll::before {
+    content: "";
+    border: 1px solid #777;
+    display: inline-block;
+    height: 60px;
+    margin-right: 50px;
+    position: absolute;
+    right: 40px;
+    top: -15px;
+
+}
+#scroll > .kcc {
+    font-size: 20px;
+}
+
+
+/* 어바웃 */
+#profile_content {
+    position: absolute;
+    width: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#big_comma {
+    width: 140px;
+    position: absolute;
+    left: -12px;
+    top: 3px;
+    transform: translate(-50%, -50%);
+}
+#big_comma > img {
+    width: 140px;
+}
+#big_comma:hover > img {
+    animation: rotate_img 2s linear infinite;
+}
+@keyframes rotate_img {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#profile_content > img {
+    float: left;
+}
+#face {
+    width: 350px;
+}
+
+#all {
+    float: right;
+    margin: 0 auto;
+    position: relative;
+}
+#about_container {
+        width: 400px;
+    overflow: hidden;
+}
+#about_container > div {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 200%;
+}
+#about_container > div > ul {
+    float: left;
+    padding-top: 5px;
+    border-top: 1px solid #333;
+    width: 400px;
+    margin-top: 150px;
+}
+#about_container > div > ul:last-child {
+    border-bottom: 1px solid #333;
+}
+#about_container > div > ul > li {
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    margin-bottom: 5px;
+    padding: 4px;
+}
+#about_container > div > ul > li > span:first-child {
+    border-right: 1px solid #333;
+    padding-right: 10px;
+    letter-spacing: 10px;
+}
+#about2 > ul > li:nth-child(3) > span:first-child {
+    color: transparent;
+}
+
+
+#btn {
+    position: absolute;
+    display: block;
+    left: 10%;
+    transform: translateY(-10%);
+    top: 400px;
+    border: 0.5px solid #666;
+    border-radius: 30px;
+    height: 10px;
+}
+#before, #after {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    width: 150px;
+    height: 10px;
+    display: block;
+}
+#before {
+    border-radius: 30px 0 0 30px;
+}
+#after {
+    border-radius: 0 30px 30px 0;
+    margin-left: 150px;
+    margin-top: -10px;
+}
+#before:hover {background-color: #666;}
+#after:hover {background-color: #666;}
+
+
+
+/* 스킬 */
+#third_page > h2 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 30px;
+}
+#third_page > h2::before {
+    content: "";
+    border: 1px solid #333;
+    display: inline-block;
+    vertical-align: middle;
+    width: 200px;
+    margin-right: 60px;
+}
+#third_page > h2::after {
+    content: "";
+    border: 1px solid #333;
+    display: inline-block;
+    vertical-align: middle;
+    width: 200px;
+    margin-left: 60px;
+}
+
+
+#third_page > .kcc {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+}
+
+#third_page > .kcc > ul > li {
+    height: 80px;
+}
+
+#third_page > .kcc li > div:first-child {
+    float: left;
+}
+
+#third_page > .kcc li > div:nth-child(2) {
+    float: right;
+}
+
+.skill {
+    position: relative;
+    width: 800px;
+    height: 20px;
+    border-radius: 30px;
+    margin: 8px auto;
+}
+.ruler {
+    position: absolute;
+    background: #333;
+    border-radius: 30px;
+    height: 20px;
+}
+.per {
+    position: relative;
+    right: -800px;
+}
+
+
+
+
+/* 작업물 */
+#fourth_page {
+    position: relative;
+}
+#select {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 100px;
+    margin-left: 300px;
+    z-index: 9999;
+}
+#select > p {
+    cursor: pointer;
+}
+#select > p:not(:nth-child(2)):hover {
+    color: black;
+}
+#web {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#select .big {
+    font-size: 25px;
+    color: #000;
+} 
+.blind {
+    display: none;
+}
+
+#container {
+    width: 480px;
+    height: 460px;
+    top: -18px;
+    position: relative;
+    background: url("../images/computer.png") no-repeat center;
+    background-size: cover;
+}
+#box {
+    position: absolute;
+    width: 459px;
+    height: 263px;
+    overflow: hidden;
+    top: 7px;
+    left: 10px;
+}
+.web_img {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 200%;
+}
+.web_img::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.web_img img {
+    float: left;
+    width: 50%;
+    height: auto;
+    top: 100px;
+    transition-duration: 3s;
+}
+
+.bang:hover {
+    transform: translateY(-82%);
+}
+.deello:hover {
+    transform: translateY(-82%);
+}
+
+#web_bottom {
+    top: 500px;
+    position: relative;
+    height: 50px;
+    overflow: hidden;
+}
+.web_info {
+    position: absolute;
+    width: 300%;
+    height: 50px;
+}
+.web_info a {
+    display: block;
+    float: left;
+    width: 480px;
+    text-align: center;
+}
+
+#prev, #next {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 40%;
+    transform: translateY(-40%);
+    opacity: 0.5;
+    transition-duration: 200ms;
+}
+#prev {
+    background: url("../images/left.png") no-repeat left center;
+    left: -20%;
+}
+#next {
+    background: url("../images/right.png") no-repeat right center;
+    right: -20%;
+}
+#web button:hover {opacity: 1;}
+#web button > span {display: none;}
+
+#etc {
+    width: 1000px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-70%, -50%);
+}
+#etc_container {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    overflow: hidden;
+}
+
+#etc_box {
+    position: absolute;
+    width: 300%;
+    height: 500px;
+    left: 0;
+}
+#etc_box > div {
+    float: left;
+    width: 33.3333%;
+    height: 500px;
+}
+#etc_box > div > div {
+    float: right;
+    margin-right: 150px;
+    margin-top: 150px;
+}
+#etc_box p {
+    display: block;
+    font-size: 25px;
+    line-height: 40px;
+}
+#etc_box p b {
+    font-weight: bold;
+}
+.etc-first:hover img {
+    transform: translateY(-70%);
+}
+
+.etc-first img {
+    width: 400px;
+    transition-duration: 5s;
+}
+.etc-sec img {
+    width: 400px;
+}
+.etc-third img {
+    width: 800px;
+    margin-bottom: 30px;
+}
+
+
+#etc_button {
+    position: relative;
+    width: 140px;
+    height: 60px;
+    top: 400px;
+    right: -250px;
+}
+#prev2, #next2 {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    opacity: 0.5;
+    transition-duration: 200ms;
+}
+#prev2 {
+    background: url("../images/etc_left.png") no-repeat left center;
+    left: 0%;
+}
+#next2 {
+    background: url("../images/etc_right.png") no-repeat right center;
+    right: 0%;
+}
+#etc button:hover {opacity: 1;}
+#etc button > span {display: none;}
+
+
+/* 마지막 */
+#thanks {
+    width: 1200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+#thanks > h2 {
+    font-size: 65px;
+    text-align: center;
+    opacity: 0;
+}
+#thanks > .line {
+    padding-top: 50px;
+    /* text-align: center; */
+}
+#last_page > .kcc {
+    position: absolute;
+    display: block;
+    line-height: 40px;
+    bottom: 60px;
+    left: 50px;
+}
+#top {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    bottom: 80px;
+    right: 60px;
+}
+
+#top > span {
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    font-size: 20px;
+    padding: 8px;
+}
+#top > span:hover {
+    font-size: 25px;
+}
